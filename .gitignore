@@ -1,0 +1,10 @@
+W_hotbox.py
+W_hotboxManager.py
+*.hotbox
+*.pdf
+/All
+/Multiple
+/Rules
+/Single
+/icons
+/Templates
