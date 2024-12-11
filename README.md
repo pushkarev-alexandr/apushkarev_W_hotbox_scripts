@@ -34,7 +34,7 @@ This collection aims to provide a wide range of tools to streamline compositing 
 ## Usage
 
 1. Open Nuke and select any node.
-2. Press the configured hotkey for W_Hotbox (default: `W`).
+2. Press the configured hotkey for W_Hotbox.
 3. Access the newly added tools and scripts from the menu.
 
 ## Contributing
@@ -45,10 +45,6 @@ If you have ideas for improvements or want to contribute additional scripts, fee
 
 - Thanks to the creators of the original W_Hotbox plugin.
 - Credits to the authors of the scripts included from external sources. Detailed acknowledgments are provided in the script comments where applicable.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
 
 ---
 
