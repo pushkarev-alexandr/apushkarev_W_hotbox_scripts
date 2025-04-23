@@ -28,6 +28,7 @@ def insideBackdropsList(node):
         if backdrop.name()!=node.name() and isInsideBackdrop(node,backdrop):
             lst.append(backdrop)
     return lst
+
 #if only one node selected, sets this node to currently active viewer input process
 #if nothing is selected removes ip node
 def setRemoveViewerInput():
@@ -37,13 +38,12 @@ def setRemoveViewerInput():
     viewer = nuke.activeViewer().node()
     kn = viewer.knob('input_process_node')
     sel = nuke.selectedNodes()
-    if not sel:#if nothing selected delete ip node
+    if not sel:  # If nothing selected delete ip backdrop
         ip_node = nuke.toNode(kn.value())
         if ip_node:
             lst = insideBackdropsList(ip_node)
-            if len(lst)==1 and lst[0]['label'].value().lower() in ['<center>ip','ip']:#delete ip backdrop
+            if len(lst)==1 and lst[0]['label'].value().lower() in ['<center>ip','ip']:  # Delete ip backdrop
                 nuke.delete(lst[0])
-            nuke.delete(ip_node)
         kn.setValue('VIEWER_INPUT')
         return
     elif len(sel)!=1:
